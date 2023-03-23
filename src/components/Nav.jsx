@@ -1,8 +1,49 @@
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import styled from "styled-components";
+import git from '../img/github.svg';
+import icon from '../img/homeIcon.png';
+
+const Container = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    margin-top: 30px;
+    z-index: 99;
+`
+const Link = styled(motion.a)`
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: ${ props => props.margin || 0 };
+    img {
+        pointer-events: none;
+    }
+`
+
 export default function Nav () {
     return (
-        <div style={{display: 'flex', justifyContent:'space-between', width:'100vw', position: 'fixed', zIndex:99}}>
-          <div>ha0peno</div>
-            <div>github</div>
-        </div>
+        <Container>
+            <Link href='/' margin='0 0 0 30px' whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+                <img src={icon} alt="" width='30px' style={{marginRight:'1em'}}/>
+                <TypeAnimation
+                    cursor={false}
+                    style={{color: '#000'}}
+                    sequence={[
+                        "ha0peno's Portfolio",
+                        1500,
+                    ]}
+                    repeat={Infinity}
+                />
+            </Link>           
+            <Link href="https://github.com/carrotpieOwO" target="_blank" margin='0 30px 0 0'
+                whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+                <img src={git} alt='github' width='30px'/>
+            </Link>
+        </Container>
     )
 }

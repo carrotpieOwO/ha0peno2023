@@ -29,7 +29,7 @@ export const Character = (props) => {
 
     return () => mixer.removeEventListener('finished', mixerListener);
   
-  }, [actions, helloFinish]);
+  }, [actions, mixer]);
 
   useEffect(() => {
     if(animation) {

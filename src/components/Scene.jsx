@@ -19,7 +19,7 @@ export default function Scene () {
                     castShadow
                 />
                 <ScrollControls pages={4} damping={0.25}>
-                    <Cloud speed={1} width={20} color='pink' opacity={1} />
+                    <Cloud speed={1} width={20} color='#FFAFBD' opacity={.5} />
                     <Overlay/>
                     <Character receiveShadow castShadow position={[1.2, -1, 0.2]} rotation={[-0.5, -0.5, 0]} />
                     <mesh

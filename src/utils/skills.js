@@ -13,6 +13,8 @@ import redux from '../img/skills/redux.png'
 import styledComponent from '../img/skills/styled-component.png'
 import springboot from '../img/skills/springboot.png'
 import ts from '../img/skills/typescript.png'
+import gatsby from '../img/skills/gatsby.png'
+import three from '../img/skills/threejs.png'
 
 const skills = [ 
     {
@@ -62,6 +64,14 @@ const skills = [
     { 
         name: 'Framer-motion',
         image: framerMotion
+    }, 
+    { 
+        name: 'Three.js',
+        image: three
+    }, 
+    { 
+        name: 'Gatsby',
+        image: gatsby
     }, 
     { 
         name: 'SpringBoot',
