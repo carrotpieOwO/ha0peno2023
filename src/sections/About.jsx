@@ -26,17 +26,20 @@ const IdPhoto = styled.img`
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
 `
 const Card = styled.div`
-    width: 40%;
+    width: 50%;
     border-radius: 10px;
-    background: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, 0.9);
     overflow: hidden;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    -webkit-box-align: center;
     align-items: center;
     padding: 30px;
     gap: 30px;
-    margin: 10px 0;
+    margin: 10px 0px;
+    min-width: 820px;
+    max-height: 850px;
 `
 const SkillGrid = styled.div`
     display: grid;

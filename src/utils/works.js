@@ -1,49 +1,49 @@
 const works = [
     {
+        projectId: 'weatherWear',
+        projectNm: 'Weather Wear',
+        mainImg: '/images/works/weatherwear.png',
+        period: '2023-03 ~ 2023-03',
+        skills: ['TypeScript', 'React', 'firebase'],
+        description: '기온별 옷 추천/기록 및 기록을 토대로 어떤 브랜드를 선호하고, 어떤 종류의 옷이 많고 또 자주입는지 분석하는 서비스를 제공합니다.',
+        link: [
+            {
+                type: 'Git',
+                url: 'https://github.com/carrotpieOwO/closet-weather'
+            },
+            {
+                type: 'Site',
+                url: 'https://weather-wear.netlify.app/'
+            }, 
+        ],
+        color: 'rgb(140, 214, 212)'
+    },
+    {
+        projectId: 'ha0penoBlog',
+        projectNm: 'ha0peno Blog',
+        mainImg: '/images/works/ha0penoBlog.png',
+        period: '2023-02 ~ 2023-03',
+        skills: ['TypeScript', 'React', 'Gatsby', 'GraphQL'],
+        description: 'Gatsby를 사용한 기술 블로그입니다. MDX로 작성하여 기록하고 있습니다.',
+        link: [
+            {
+                type: 'Git',
+                url: 'https://github.com/carrotpieOwO/ha0peno-blog'
+            },
+            {
+                type: 'Site',
+                url: 'https://ha0peno-blog.netlify.app/'
+            }, 
+        ],
+        color: 'rgb(91, 94, 118)'
+    },
+    {
         projectId: 'todolist',
         projectNm: 'ha0 Todo',
         mainImg: '/images/works/todo/todoTitle.png',
         period: '2023-01 ~ 2023-01',
         skills: ['TypeScript', 'React', 'Redux', 'AntDesign'],
         description: 'todo App으로 할일목록의 CRUD와 날짜별, 상태별, 태그별 필터링을 제공하고 타임라인으로 레이아웃 변경 기능을 제공합니다.',
-        contents: [
-            {
-                images:[{image: '/images/works/todo/todoTag.png'}],
-                content: ['투두 입력/저장기능', '유효성 검사기능', '태그 추가기능', '태그색 지정기능', '태그 중복검사기능'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoCheck.png'}],
-                content: ['투두 체크기능', '투두 진행률을 프로그레스바로 표현'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoEdit.png'}],
-                content: ['투두 수정기능', '태그 컴포넌트 재사용하여 수정시에도 태그를 추가/수정할 수 있도록 구현'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoDelete.png'}],
-                content: ['투두 삭제기능'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoFilter.png'}],
-                content: ['투두 날짜별 조회기능', '전주/차주 이동하여 날짜를 선택할 수 있도록 구현', '전체보기/미완료/태그별 필터기능'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoSearch.png'}],
-                content: ['투두 검색기능'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoOverdue.png'}],
-                content: ['기한이 지난 투두 목록 표시기능', '지난 날짜 계산하여 표시해주도록 구현'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoTimeline.png'}],
-                content: ['투두 레이아웃 변경기능', '타임라인으로 시간별로 정렬하도록 구현', '타임라인 체크기능 구현'],
-            },
-            {
-                images:[{image: '/images/works/todo/todoNight.png'}],
-                content: ['투두 테마 변경기능'],
-            },
-        ],
         link: [
             {
                 type: 'Git',
