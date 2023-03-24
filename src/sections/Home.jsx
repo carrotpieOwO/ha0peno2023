@@ -53,10 +53,10 @@ const heartVariants = {
 }
 const upDownVariants = {
     start: { 
-        y: 15 
+        y: 5
     },
     end: { 
-        y: [15, 0], transition: { duration: 1, times: [0, 0.2], repeat: Infinity, repeatType: "reverse" }
+        y: [5, -10], transition: { duration: 1, times: [0, 0.2], repeat: Infinity, repeatType: "reverse" }
     }
 };
 const shakeVariants = {
@@ -84,7 +84,7 @@ export default function Home (props) {
                             </motion.div>
                             <MouseWrapper>
                                 <Mouse>
-                                    <Wheel variants={upDownVariants} custom={0} initial='start' animate='end' />
+                                    <Wheel variants={upDownVariants} initial='start' animate='end' />
                                 </Mouse>
                             </MouseWrapper>
                         </>
