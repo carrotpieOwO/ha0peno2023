@@ -6,6 +6,7 @@ import About from "../sections/About";
 import Contact from "../sections/Contact";
 import Home from "../sections/Home";
 import Projects from "../sections/Projects";
+import Chat from "./Chat";
 
 export const Overlay = () => {
     const scroll = useScroll();
@@ -25,11 +26,14 @@ export const Overlay = () => {
     })
 
     return (
-        <Scroll html>
-            <Home progress={homeScrollProgress} />
-            <About progress={aboutScrollProgress} />
-            <Projects progress={projectScrollProgress} setModal={setModal} setContent={setContent}/>
-            <Contact progress={contactScrollProgress} />
-        </Scroll>
+        <>
+            <Scroll html>
+                <Home progress={homeScrollProgress} />
+                <About progress={aboutScrollProgress} />
+                <Projects progress={projectScrollProgress} setModal={setModal} setContent={setContent}/>
+                <Contact progress={contactScrollProgress} />
+                <Chat />
+            </Scroll>
+        </>
     )
 }
