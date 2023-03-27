@@ -22,14 +22,10 @@ export default function Scene () {
                 <ScrollControls pages={4} damping={0.25}>
                     <Cloud speed={1} width={20} color='#FFAFBD' opacity={.5} />
                     <Overlay/>
-                    <Character receiveShadow castShadow position={[1.2, -1, .4]} rotation={[0, -.2, 0]} />
-                    <mesh
-                        rotation={[-0.5 * Math.PI, 0, 0]}
-                        position={[0, 0, 0]}
-                        receiveShadow
-                    >
-                        <planeBufferGeometry args={[10, 10, 1, 1]}/>
-                        <shadowMaterial transparent opacity={0.2} />
+                    <Character receiveShadow castShadow position={[1.2, -1, .4]} rotation={[0, -.2, 0]} scale={1.5}/>
+                    <mesh rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -1, 0]} receiveShadow>
+                        <planeBufferGeometry args={[5, 5, 1, 1]} />
+                        <shadowMaterial transparent opacity={0.1} />
                     </mesh>
                 </ScrollControls>  
             </Suspense>

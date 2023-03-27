@@ -28,10 +28,7 @@ export default function Chat() {
         }, 500);
     };
 
-    const [play, { stop }] = useSound(
-        ung,
-        { volume: 0.5 }
-    );
+    const [play] = useSound(ung);
     
     const [opend, setOpend] = useState(false);
     const onMouseEnter = () => {

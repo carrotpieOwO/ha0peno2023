@@ -3,17 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { AnimationProvider } from './contexts/Animations';
 import { ModalProvider } from './contexts/ModalContexts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AnimationProvider>
-      <ModalProvider>
-        <App />
-      </ModalProvider>
-    </AnimationProvider>
+    <ModalProvider>
+      <App />
+    </ModalProvider>
   </React.StrictMode>
 );
 
