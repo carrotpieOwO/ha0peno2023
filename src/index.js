@@ -11,8 +11,8 @@ root.render(
   <React.StrictMode>
     <AnimationProvider>
       <ModalProvider>
-    <App />
-    </ModalProvider>
+        <App />
+      </ModalProvider>
     </AnimationProvider>
   </React.StrictMode>
 );

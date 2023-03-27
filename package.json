@@ -17,6 +17,7 @@
     "react-type-animation": "^3.0.1",
     "styled-components": "^5.3.9",
     "three": "^0.150.1",
+    "use-sound": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

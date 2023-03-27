@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 import contactList from '../utils/contacts';
+import hover from '../sound/hover.mp3';
+import useSound from 'use-sound';
 
 const Container = styled.div`
     height: 100vh;
@@ -97,6 +99,8 @@ const cardVariants = {
 }
 
 export default function Contact (props) {
+    const [ play, {stop}] = useSound(hover);
+
     return (
         <Container>
             <AnimatePresence>
@@ -113,6 +117,8 @@ export default function Contact (props) {
                     {
                         contactList.map(item => 
                             <Card key={item.title} variants={cardVariants} 
+                                onMouseEnter={() => play()}
+                                onMouseLeave={() => stop()}
                                 onClick={() => {window.open(item.link)}}
                             >
                                 <h1>{item.title}</h1>

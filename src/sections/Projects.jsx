@@ -5,6 +5,11 @@ import works from '../utils/works';
 import arrowLeft from '../img/arrow-left.svg';
 import arrowRight from '../img/arrow-right.svg';
 import ProjectCard from '../components/ProjectCard';
+import useSound from "use-sound";
+import nextSound from '../sound/next.mp3';
+import prevSound from '../sound/prev.mp3';
+import pickSound from '../sound/pick.mp3'
+import clickSound from '../sound/click.mp3';
 
 const Container = styled(motion.div)`
     height: 100vh;
@@ -87,6 +92,10 @@ export default function Projects(props) {
     const [ left, setLeft ] = useState((windowWidth / 2 ) - (cardWidth / 2));
     const [ targetIndex, setTargetIndex ] = useState(0);
     const [ bgColor, setBgColor ] = useState('transparent');
+    const [ nextPlay ] = useSound(nextSound);
+    const [ prevPlay ] = useSound(prevSound);
+    const [ pickPlay ] = useSound(pickSound);
+    const [ clickPlay ] = useSound(clickSound);
 
 
     // window 사이즈 변경감지
@@ -108,10 +117,12 @@ export default function Projects(props) {
     const showNextSlide = () => {
         setLeft( prev => prev -= cardWidth)
         setTargetIndex( prev => prev += 1)
+        nextPlay();
     };
     const showPrevSlide = () => {
         setLeft( prev => prev += cardWidth)
         setTargetIndex( prev => prev -= 1)
+        prevPlay();
     };
 
     // 선택된 project가 아닌 card를 클릭 할 경우 해당 project를 선택한다.
@@ -120,10 +131,12 @@ export default function Projects(props) {
 
         setTargetIndex(newIndex)
         setLeft( prev => prev + leftPosition)
+        pickPlay();
     }
 
     // project card의 버튼 클릭
     const onClick = (link, item) => {
+        clickPlay();
         if (link.type !== 'Detail') {
             // code, live view의 경우 해당 페이지로 이동
             window.open(link.url)

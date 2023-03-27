@@ -7,6 +7,7 @@ const Circle = styled.div`
     height: 15px;
     border-radius: 8px;
     background-color: ${props => props.bgColor};
+    z-index: 2;
 `
 const ModalContainer = styled(motion.div)`
     border-radius: 20px;
@@ -87,7 +88,7 @@ export default function Modal () {
                     >
                         <ModalNav>
                             <div>
-                                <Circle bgColor="#FF605C" />
+                                <Circle bgColor="#FF605C" onClick={() => setModal(false)}/>
                                 <Circle bgColor="#FFBD44" />
                                 <Circle bgColor="#00CA4E" />
                             </div>

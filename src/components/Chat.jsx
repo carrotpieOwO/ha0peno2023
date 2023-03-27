@@ -2,8 +2,10 @@ import ChatBot from 'react-simple-chatbot';
 import avatar from '../img/icon.png';
 import chatMsg from "../utils/chatMsg";
 import icon from '../img/icon.png'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import useSound from 'use-sound';
+import ung from '../sound/ung.mp3';
 
 const theme = {
     background: '#f5f8fb',
@@ -26,19 +28,34 @@ export default function Chat() {
         }, 500);
     };
 
+    const [play, { stop }] = useSound(
+        ung,
+        { volume: 0.5 }
+    );
+    
+    const [opend, setOpend] = useState(false);
+    const onMouseEnter = () => {
+        !opend && play()
+    }
+      
     return (
-        <ThemeProvider theme={theme}>
-        <ChatBot
-            ref={bot}
-            botAvatar={avatar}
-            style={{ position:'absolute', bottom:'1.5em', right:'1.5em'}}
-            steps={ chatMsg }
-            floating
-            headerTitle="Let's Talk❤️"
-            floatingIcon={<img src={icon} width="80%" alt="" />}
-            handleEnd={handleEnd}
-            placeholder={"채팅이 불가능한 채널입니다."}
-        />
-        </ThemeProvider>
+        <div onClick={onMouseEnter}>
+            <ThemeProvider theme={theme}>
+                <ChatBot
+                    ref={bot}
+                    botAvatar={avatar}
+                    style={{ position:'absolute', bottom:'1.5em', right:'1.5em'}}
+                    steps={ chatMsg }
+                    floating
+                    headerTitle="Let's Talk❤️"
+                    floatingIcon={<img src={icon} width="80%" alt="" />}
+                    handleEnd={handleEnd}
+                    placeholder={"채팅이 불가능한 채널입니다."}
+                    toggleFloating={() => setOpend(!opend)}
+                    opened={opend}
+                />
+            </ThemeProvider>
+        </div>
+
     )
 }

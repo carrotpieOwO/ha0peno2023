@@ -1,4 +1,4 @@
-import { Cloud, Html, OrbitControls, ScrollControls } from "@react-three/drei";
+import { Cloud, OrbitControls, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import Character from "./Character";
