@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 const CardWrap = styled(motion.div)`
     position: absolute;
     display: flex;
-    top: 300px;
+    top: 450px;
 `
 const Card = styled(motion.div)`
     width: 350px;

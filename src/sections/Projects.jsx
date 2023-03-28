@@ -20,7 +20,7 @@ const Container = styled(motion.div)`
 const Title = styled(motion.div)`
     position: absolute;
     left: 200px;
-    top: 90px;
+    top: 130px;
 
     div {
         display: flex;
@@ -48,7 +48,7 @@ const Content = styled.div`
 
 const SlideBtnWrap = styled.div`
     position: absolute;
-    bottom: 100px;
+    bottom: 200px;
     display: flex;
     width: 100vw;
     justify-content: center;
