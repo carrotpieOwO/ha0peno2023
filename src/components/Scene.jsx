@@ -1,8 +1,8 @@
 import { Cloud, OrbitControls, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import Character from "./Character";
 import Loading from "./Loading";
+import { Model } from "./Model";
 import { Overlay } from "./Overlay";
 
 export default function Scene () {
@@ -20,9 +20,9 @@ export default function Scene () {
                     castShadow
                 />
                 <ScrollControls pages={4} damping={0.25}>
-                    <Cloud speed={1} width={20} color='#FFAFBD' opacity={.5} />
+                    <Cloud position={[-4, -2, -25]} speed={1} width={20} color='#FFAFBD' opacity={.5} />
                     <Overlay/>
-                    <Character receiveShadow castShadow position={[1.2, -1, .4]} rotation={[0, -.2, 0]} scale={1.5}/>
+                    <Model  receiveShadow castShadow position={[1.2, -1, .4]} rotation={[0, -.2, 0]} scale={1.5} />
                     <mesh rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -1, 0]} receiveShadow>
                         <planeBufferGeometry args={[5, 5, 1, 1]} />
                         <shadowMaterial transparent opacity={0.1} />

@@ -16,7 +16,8 @@ export const Character = (props) => {
   const { actions, names, mixer } = useAnimations(animations, group)
   const [ helloFinish, setHelloFinish ] = useState(false);
   const [ animation, setAnimation ] = useState('hello');
-
+  const [ bgmToggle, setBgmToggle ] = useState(false);
+  
   const [ play ] = useSound(woo);
   console.log('names', names)
   const scroll = useScroll();
