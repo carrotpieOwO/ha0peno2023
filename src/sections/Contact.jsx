@@ -37,6 +37,7 @@ const Card = styled(motion.div)`
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
     margin: 0;
     padding: 0;
+    cursor: pointer;
     width: 300px;
     height: 300px;
     position: relative;

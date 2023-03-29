@@ -60,6 +60,7 @@ const SlideBtn = styled(motion.button)`
     height: 60px;
     border-radius: 30px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     border: none;
