@@ -7,6 +7,7 @@ import Contact from "../sections/Contact";
 import Home from "../sections/Home";
 import Projects from "../sections/Projects";
 import Chat from "./Chat";
+import Footer from "./Footer";
 
 export const Overlay = () => {
     const scroll = useScroll();
@@ -33,6 +34,7 @@ export const Overlay = () => {
                 <Projects progress={projectScrollProgress} setModal={setModal} setContent={setContent}/>
                 <Contact progress={contactScrollProgress} />
                 <Chat />
+                <Footer />
             </Scroll>
         </>
     )
