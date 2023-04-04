@@ -16,10 +16,9 @@ export const Character = (props) => {
   const { actions, names, mixer } = useAnimations(animations, group)
   const [ helloFinish, setHelloFinish ] = useState(false);
   const [ animation, setAnimation ] = useState('hello');
-  const [ bgmToggle, setBgmToggle ] = useState(false);
   
   const [ play ] = useSound(woo);
-  console.log('names', names)
+  
   const scroll = useScroll();
   useEffect(() => {
     // hello 애니메이션 종료 직후 dance애니메이션을 실행하기 위해 애니메이션 종료를 알려준다.
@@ -96,7 +95,7 @@ export const Character = (props) => {
   }
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} style={{cursor: 'pointer'}}>
       <group name="Chloe" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
         <primitive object={nodes.mixamorigHips} />
         <skinnedMesh onClick={handleClick} rotation={[-Math.PI / 2, 0, 0]} scale={100} castShadow name="Chloe_body_lower" geometry={nodes.Chloe_body_lower.geometry} material={materials['매테리얼.001']} skeleton={nodes.Chloe_body_lower.skeleton} />

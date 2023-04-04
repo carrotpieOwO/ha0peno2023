@@ -13,14 +13,15 @@ import clickSound from '../sound/click.mp3';
 
 const Container = styled(motion.div)`
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     position: relative;
 `
 const Title = styled(motion.div)`
     position: absolute;
     left: 200px;
-    top: 130px;
+    top: 10%;
+    /* margin: 100px; */
 
     div {
         display: flex;
@@ -42,13 +43,13 @@ const Title = styled(motion.div)`
 const Content = styled.div`
     display: flex;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     height: 100%;
 `
 
 const SlideBtnWrap = styled.div`
     position: absolute;
-    bottom: 200px;
+    bottom: 10%;
     display: flex;
     width: 100vw;
     justify-content: center;
